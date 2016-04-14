@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default React.createClass({
   displayName: 'Login',
 
@@ -22,7 +24,7 @@ export default React.createClass({
   },
 
   render() {
-    const errorStyle = this.state.error ? { display : 'block' } : null;
+    const errorStyle = this.state.error ? { display: 'block' } : null;
     return (
       <div className="w-section login-section">
         <div className="w-container login-content">

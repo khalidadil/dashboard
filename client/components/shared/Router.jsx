@@ -1,34 +1,31 @@
-import Header from './shared/layouts/Header.jsx';
-import LeftSidebar from './shared/layouts/LeftSidebar.jsx';
-import RightSidebar from './shared/layouts/RightSidebar.jsx';
-import UserApp from './admin/UserApp.jsx';
-import AdminApp from './admin/AdminApp.jsx';
 import NotFound from './NotFound.jsx';
 import Skel from './Skel.jsx';
+import Login from './Login.jsx';
+import AdminApp from '/client/components/admin/AdminApp.jsx';
+import UserApp from '/client/components/user/UserApp.jsx';
+import MainLayout from '/client/components/user/layout/MainLayout.jsx';
 
-const { Router, Route, IndexRoute, history } = ReactRouter;
-const { render } = ReactDOM;
+// First we import some modules...
+import React from 'react';
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
+import { render } from 'react-dom';
 
-const hist = history.useQueries(ReactRouter.history.createHistory)();
+// const hist = hashHistory.useQueries(ReactRouter.hashHistory.createHistory)();
+// console.log(ReactRouter);
+// const hist = ReactRouter.browserHistory;
 
 function requireAuth() {
-  if (!Meteor.userId()) {
-    // replace({
-      // pathname: '/login',
-      // state: { nextPathname: nextState.location.pathname },
-    // });
-    window.location = '/login';
-  }
+  // if (!Meteor.userId()) {
+  //   window.location = '/login';
+  // }
 }
 
 Meteor.startup(() => {
   render(
-    <Router history={hist}>
+    <Router history={browserHistory}>
       <Route path="/login" component={Login} />
-      <Route path="/admin" component={AdminApp} />
-      <Route path="/" component={UserApp} onEnter={requireAuth}>
-        <Route>
-          <IndexRoute/>
+      <Route path="/">
+        <Route component={MainLayout}>
           <Route path="myAccount" component={Skel} />
           <Route path="addChannel" component={Skel} />
           <Route path="member/:memberId" component={Skel} />
