@@ -10,7 +10,8 @@
   "author": "khalidadil",
   "license": "ISC",
   "dependencies": {
-    "react": "^0.14.7",
+    "react": "^15.0.2",
+    "react-addons-pure-render-mixin": "^15.0.2",
     "react-dom": "^0.14.7",
     "react-layout": "^1.1.0",
     "react-router": "^2.0.1"

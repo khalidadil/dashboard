@@ -4,11 +4,15 @@ export default React.createClass({
 
   displayName: 'QuickSidebar',
 
+  propTypes: {
+    toggleRightSidebar: React.PropTypes.func,
+  },
+
   render() {
     return (
         <div>
           {/* BEGIN QUICK SIDEBAR */}
-          <a href="javascript:;" className="page-quick-sidebar-toggler">
+          <a className="page-quick-sidebar-toggler" onClick={this.props.toggleRightSidebar.bind(null, this)}>
             <i className="icon-login" />
           </a>
           <div className="page-quick-sidebar-wrapper" data-close-on-body-click="false">
@@ -58,14 +62,14 @@ export default React.createClass({
                         <div className="media-status">
                           <span className="badge badge-success">8</span>
                         </div>
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar3.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar3.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Bob Nilson</h4>
                           <div className="media-heading-sub"> Project Manager </div>
                         </div>
                       </li>
                       <li className="media">
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar1.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar1.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Nick Larson</h4>
                           <div className="media-heading-sub"> Art Director </div>
@@ -75,14 +79,14 @@ export default React.createClass({
                         <div className="media-status">
                           <span className="badge badge-danger">3</span>
                         </div>
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar4.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar4.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Deon Hubert</h4>
                           <div className="media-heading-sub"> CTO </div>
                         </div>
                       </li>
                       <li className="media">
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar2.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar2.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Ella Wong</h4>
                           <div className="media-heading-sub"> CEO </div>
@@ -95,7 +99,7 @@ export default React.createClass({
                         <div className="media-status">
                           <span className="badge badge-warning">2</span>
                         </div>
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar6.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar6.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Lara Kunis</h4>
                           <div className="media-heading-sub"> CEO, Loop Inc </div>
@@ -106,7 +110,7 @@ export default React.createClass({
                         <div className="media-status">
                           <span className="label label-sm label-success">new</span>
                         </div>
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar7.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar7.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Ernie Kyllonen</h4>
                           <div className="media-heading-sub"> Project Manager,
@@ -114,7 +118,7 @@ export default React.createClass({
                         </div>
                       </li>
                       <li className="media">
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar8.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar8.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Lisa Stone</h4>
                           <div className="media-heading-sub"> CTO, Keort Inc </div>
@@ -125,14 +129,14 @@ export default React.createClass({
                         <div className="media-status">
                           <span className="badge badge-success">7</span>
                         </div>
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar9.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar9.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Deon Portalatin</h4>
                           <div className="media-heading-sub"> CFO, H&amp;D LTD </div>
                         </div>
                       </li>
                       <li className="media">
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar10.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar10.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Irina Savikova</h4>
                           <div className="media-heading-sub"> CEO, Tizda Motors Inc </div>
@@ -142,7 +146,7 @@ export default React.createClass({
                         <div className="media-status">
                           <span className="badge badge-danger">4</span>
                         </div>
-                        <img className="media-object" src="../assets/layouts/layout/img/avatar11.jpg" alt="..." />
+                        <img className="media-object" src="assets/layouts/layout2/img/avatar11.jpg" alt="..." />
                         <div className="media-body">
                           <h4 className="media-heading">Maria Gomez</h4>
                           <div className="media-heading-sub"> Manager, Infomatic Inc </div>
@@ -159,7 +163,7 @@ export default React.createClass({
                       </div>
                       <div className="page-quick-sidebar-chat-user-messages">
                         <div className="post out">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar3.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar3.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Bob Nilson</a>
@@ -168,7 +172,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post in">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar2.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar2.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Ella Wong</a>
@@ -177,7 +181,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post out">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar3.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar3.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Bob Nilson</a>
@@ -186,7 +190,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post in">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar2.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar2.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Ella Wong</a>
@@ -195,7 +199,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post out">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar3.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar3.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Bob Nilson</a>
@@ -204,7 +208,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post in">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar2.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar2.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Ella Wong</a>
@@ -213,7 +217,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post out">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar3.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar3.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Bob Nilson</a>
@@ -222,7 +226,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post in">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar2.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar2.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Ella Wong</a>
@@ -231,7 +235,7 @@ export default React.createClass({
                           </div>
                         </div>
                         <div className="post out">
-                          <img className="avatar" alt src="../assets/layouts/layout/img/avatar3.jpg" />
+                          <img className="avatar" alt src="assets/layouts/layout2/img/avatar3.jpg" />
                           <div className="message">
                             <span className="arrow" />
                             <a href="javascript:;" className="name">Bob Nilson</a>
@@ -543,9 +547,9 @@ export default React.createClass({
                     <h3 className="list-heading">System Settings</h3>
                     <ul className="list-items borderless">
                       <li> Security Level
-                        <select className="form-control input-inline input-sm input-small">
+                        <select selected={2} className="form-control input-inline input-sm input-small">
                           <option value={1}>Normal</option>
-                          <option value={2} selected>Medium</option>
+                          <option value={2}>Medium</option>
                           <option value="e">High</option>
                         </select>
                       </li>

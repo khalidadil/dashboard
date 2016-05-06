@@ -4,6 +4,7 @@ import Login from './Login.jsx';
 import AdminApp from '/client/components/admin/AdminApp.jsx';
 import UserApp from '/client/components/user/UserApp.jsx';
 import MainLayout from '/client/components/user/layout/MainLayout.jsx';
+import AddChannel from '/client/components/user/AddChannel.jsx';
 
 // First we import some modules...
 import React from 'react';
@@ -27,7 +28,7 @@ Meteor.startup(() => {
       <Route path="/">
         <Route component={MainLayout}>
           <Route path="myAccount" component={Skel} />
-          <Route path="addChannel" component={Skel} />
+          <Route path="addChannel" component={AddChannel} />
           <Route path="member/:memberId" component={Skel} />
         </Route>
       </Route>
